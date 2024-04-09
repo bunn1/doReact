@@ -51,6 +51,10 @@ function App() {
         <button onClick={addTask}>Add Task</button>
       </div>
       <hr />
+
+      <div>
+        <input type="text" />
+      </div>
       <ul>
         {toDoList.map((val, key) => {
           return (

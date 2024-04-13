@@ -94,7 +94,6 @@ function ToDo() {
               <button onClick={() => deleteTask(val.task)}>X</button>
               <button onClick={() => handleEdit(val.task)}>Edit</button>
               <button onClick={handleSave}>Save</button>
-              {val.task ? <h1>Task Complete</h1> : <h2>Task Not Completed</h2>}
             </div>
           );
         })}

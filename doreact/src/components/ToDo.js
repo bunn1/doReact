@@ -81,7 +81,13 @@ function ToDo() {
         {toDoList.map((val, key) => {
           return (
             <div id="task" key={key}>
-              <li>{val.task}</li>
+              <li
+                style={{
+                  textDecoration: val.completed ? 'line-through' : 'none',
+                }}
+              >
+                {val.task}
+              </li>
               <button onClick={() => completeTask(val.task)}>
                 {val.completed ? 'Mark Incomplete' : 'Mark Complete'}
               </button>

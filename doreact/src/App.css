@@ -1,24 +1,27 @@
 .App {
   text-align: center;
+ 
 }
 
 input{
-  margin: 10px;
-  width: 300px;
+  margin: 30px 0;
+  width: 250px;
   height: 40px;
   font-size: 18px;
   padding-left: 10px;
-
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
 ul{
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 li{
   list-style-type: none;
-  width: 300px;
+  width: 220px;
   height: 40px;
   background-color: #00df6c;
   margin: 10px;
@@ -37,7 +40,7 @@ li{
 
 button{
   height: 50px;
-  width: 120px;
+  width: 70px;
   margin: 5px;
   border: none;
   background-color: coral;
@@ -64,10 +67,23 @@ input.inputBox{
   border-bottom: 2px solid black;
 }
 
-.inputButton{
+ .inputButton{
   background-color: #00df6c;
   color: white;
   border: none;
   border-radius: 5px;
+} 
 
+#saveButton{
+  background-color: black;
 }
+
+#deleteButton{
+  background-color: black;
+}
+
+.completed-task{
+  text-decoration: line-through;
+  color: coral;
+}
+

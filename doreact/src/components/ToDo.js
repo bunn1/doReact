@@ -9,7 +9,9 @@ function ToDo() {
   const inputTask = useRef(null);
 
   function addTask() {
+    // add task to list
     setTodoList([...toDoList, { task: currentTask, completed: false }]);
+    // clear line
     inputTask.current.value = '';
     setCurrentTask('');
   }
@@ -73,6 +75,7 @@ function ToDo() {
             setCurrentTask(event.target.value);
           }}
         />
+
         <button onClick={addTask}>Add Task</button>
       </div>
       <hr />
@@ -81,19 +84,19 @@ function ToDo() {
         {toDoList.map((val, key) => {
           return (
             <div id="task" key={key}>
-              <li
-                style={{
-                  textDecoration: val.completed ? 'line-through' : 'none',
-                }}
-              >
+              <li className={val.completed ? 'completed-task' : ''}>
                 {val.task}
               </li>
               <button onClick={() => completeTask(val.task)}>
                 {val.completed ? 'Mark Incomplete' : 'Mark Complete'}
               </button>
-              <button onClick={() => deleteTask(val.task)}>X</button>
+              <button id="deleteButton" onClick={() => deleteTask(val.task)}>
+                X
+              </button>
               <button onClick={() => handleEdit(val.task)}>Edit</button>
-              <button onClick={handleSave}>Save</button>
+              <button id="saveButton" onClick={handleSave}>
+                Save
+              </button>
             </div>
           );
         })}

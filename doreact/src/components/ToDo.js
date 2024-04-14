@@ -1,20 +1,30 @@
 import React from 'react';
 import { useState, useRef } from 'react';
+import { FiCheckCircle, FiAlertCircle } from 'react-icons/fi';
 
 function ToDo() {
   const [toDoList, setTodoList] = useState([]);
   const [currentTask, setCurrentTask] = useState('');
   const [editTask, setEditTask] = useState(null);
+  const [reminder, setReminder] = useState(false);
 
   const inputTask = useRef(null);
 
   function addTask() {
     // add task to list
-    setTodoList([...toDoList, { task: currentTask, completed: false }]);
+    setTodoList([
+      ...toDoList,
+      { task: currentTask, completed: false, reminder },
+    ]);
     // clear line
     inputTask.current.value = '';
     setCurrentTask('');
+    setReminder(!reminder);
   }
+
+  const toggleReminder = () => {
+    setReminder(!reminder);
+  };
 
   const deleteTask = (taskToDelete) => {
     setTodoList(
@@ -75,6 +85,19 @@ function ToDo() {
             setCurrentTask(event.target.value);
           }}
         />
+        <div className="form-control form-control-check">
+          <label>
+            Set Reminder
+            <input
+              name="field-name-three"
+              id="unique-field-id-three"
+              type="checkbox"
+              checked={reminder}
+              // value={reminder}
+              onChange={toggleReminder}
+            />
+          </label>
+        </div>
 
         <button onClick={addTask}>Add Task</button>
       </div>
@@ -86,6 +109,13 @@ function ToDo() {
             <div id="task" key={key}>
               <li className={val.completed ? 'completed-task' : ''}>
                 {val.task}
+                {val.reminder ? (
+                  <FiCheckCircle
+                    style={{ marginLeft: '10 px', color: 'coral' }}
+                  />
+                ) : (
+                  ''
+                )}
               </li>
               <button onClick={() => completeTask(val.task)}>
                 {val.completed ? 'Mark Incomplete' : 'Mark Complete'}

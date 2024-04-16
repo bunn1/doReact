@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/doReact/static/css/main.143c3dd6.css",
-    "main.js": "/doReact/static/js/main.7731611e.js",
-    "static/js/453.96418e9e.chunk.js": "/doReact/static/js/453.96418e9e.chunk.js",
-    "index.html": "/doReact/index.html",
-    "main.143c3dd6.css.map": "/doReact/static/css/main.143c3dd6.css.map",
-    "main.7731611e.js.map": "/doReact/static/js/main.7731611e.js.map",
-    "453.96418e9e.chunk.js.map": "/doReact/static/js/453.96418e9e.chunk.js.map"
+    "main.css": "/your-repository-name/static/css/main.143c3dd6.css",
+    "main.js": "/your-repository-name/static/js/main.0a16a8ac.js",
+    "static/js/453.96418e9e.chunk.js": "/your-repository-name/static/js/453.96418e9e.chunk.js",
+    "index.html": "/your-repository-name/index.html",
+    "main.143c3dd6.css.map": "/your-repository-name/static/css/main.143c3dd6.css.map",
+    "main.0a16a8ac.js.map": "/your-repository-name/static/js/main.0a16a8ac.js.map",
+    "453.96418e9e.chunk.js.map": "/your-repository-name/static/js/453.96418e9e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.143c3dd6.css",
-    "static/js/main.7731611e.js"
+    "static/js/main.0a16a8ac.js"
   ]
 }

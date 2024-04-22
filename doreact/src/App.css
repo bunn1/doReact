@@ -3,15 +3,6 @@
  
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-hr{
-  margin: 30px 0; 
-}
 input{
   margin: 30px 0;
   width: 250px;
@@ -83,16 +74,6 @@ input.inputBox{
   border-radius: 5px;
 } 
 
-#addButton{
-  height: 50px;
-  width: 140px;
-  border: none;
-  background-color: coral;
-  border-radius: 5px;
-  color: white;
-  font-size: 16px;
-}
-
 #saveButton{
   background-color: black;
 }
@@ -106,33 +87,3 @@ input.inputBox{
   color: coral;
 }
 
-.checkReminder {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  width: 20px;
-  height: 20px;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  outline: none;
-  cursor: pointer;
-  margin-right: 10px; /* Adjust as needed */
-}
-
-.checkReminder:checked {
-  border-color: coral;
-  background-color: coral;
-}
-
-.checkReminder:focus {
-  outline: 2px solid #ccc;
-}
-
-.checkReminderLabel {
-  color: #fff;
-  color: #fff;
-}
-
-.checkReminder{
-  margin: 15px 0; 
-}

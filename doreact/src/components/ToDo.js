@@ -71,7 +71,7 @@ function ToDo() {
   return (
     <div className="App">
       <h1>To Do List!</h1>
-      <div className="container">
+      <div>
         <input
           ref={inputTask}
           value={currentTask}
@@ -85,22 +85,21 @@ function ToDo() {
             setCurrentTask(event.target.value);
           }}
         />
-        <label className="labelReminder">Set Reminder:</label>
         <div className="form-control form-control-check">
-          <input
-            className="checkReminder"
-            name="field-name-three"
-            id="unique-field-id-three"
-            type="checkbox"
-            checked={reminder}
-            // value={reminder}
-            onChange={toggleReminder}
-          />
+          <label>
+            Set Reminder
+            <input
+              name="field-name-three"
+              id="unique-field-id-three"
+              type="checkbox"
+              checked={reminder}
+              // value={reminder}
+              onChange={toggleReminder}
+            />
+          </label>
         </div>
 
-        <button id="addButton" onClick={addTask}>
-          Add Task
-        </button>
+        <button onClick={addTask}>Add Task</button>
       </div>
       <hr />
 
@@ -110,7 +109,13 @@ function ToDo() {
             <div id="task" key={key}>
               <li className={val.completed ? 'completed-task' : ''}>
                 {val.task}
-                {val.reminder ? <FiCheckCircle /> : ''}
+                {val.reminder ? (
+                  <FiCheckCircle
+                    style={{ marginLeft: '10 px', color: 'coral' }}
+                  />
+                ) : (
+                  ''
+                )}
               </li>
               <button onClick={() => completeTask(val.task)}>
                 {val.completed ? 'Mark Incomplete' : 'Mark Complete'}

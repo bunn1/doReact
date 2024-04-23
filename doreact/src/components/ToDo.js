@@ -11,12 +11,16 @@ function ToDo() {
   const inputTask = useRef(null);
 
   function addTask() {
+<<<<<<< HEAD
     // add task to list
     setTodoList([
       ...toDoList,
       { task: currentTask, completed: false, reminder },
     ]);
     // clear line
+=======
+    setTodoList([...toDoList, { task: currentTask, completed: false }]);
+>>>>>>> parent of dd493b3 (cleaning)
     inputTask.current.value = '';
     setCurrentTask('');
     setReminder(!reminder);
@@ -85,6 +89,7 @@ function ToDo() {
             setCurrentTask(event.target.value);
           }}
         />
+<<<<<<< HEAD
         <label className="labelReminder">Set Reminder:</label>
         <div className="form-control form-control-check">
           <input
@@ -101,6 +106,9 @@ function ToDo() {
         <button id="addButton" onClick={addTask}>
           Add Task
         </button>
+=======
+        <button onClick={addTask}>Add Task</button>
+>>>>>>> parent of dd493b3 (cleaning)
       </div>
       <hr />
 
@@ -108,20 +116,20 @@ function ToDo() {
         {toDoList.map((val, key) => {
           return (
             <div id="task" key={key}>
-              <li className={val.completed ? 'completed-task' : ''}>
+              <li
+                style={{
+                  textDecoration: val.completed ? 'line-through' : 'none',
+                }}
+              >
                 {val.task}
                 {val.reminder ? <FiCheckCircle /> : ''}
               </li>
               <button onClick={() => completeTask(val.task)}>
                 {val.completed ? 'Mark Incomplete' : 'Mark Complete'}
               </button>
-              <button id="deleteButton" onClick={() => deleteTask(val.task)}>
-                X
-              </button>
+              <button onClick={() => deleteTask(val.task)}>X</button>
               <button onClick={() => handleEdit(val.task)}>Edit</button>
-              <button id="saveButton" onClick={handleSave}>
-                Save
-              </button>
+              <button onClick={handleSave}>Save</button>
             </div>
           );
         })}

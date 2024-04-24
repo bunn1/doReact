@@ -1,5 +1,8 @@
 {
+<<<<<<< HEAD
   "homepage": "https://bunn1.github.io/doreact/",
+=======
+>>>>>>> parent of 32b3b78 (installation of GitHub pages package)
   "name": "doreact",
   "version": "0.1.0",
   "private": true,

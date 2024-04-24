@@ -11,16 +11,12 @@ function ToDo() {
   const inputTask = useRef(null);
 
   function addTask() {
-<<<<<<< HEAD
     // add task to list
     setTodoList([
       ...toDoList,
       { task: currentTask, completed: false, reminder },
     ]);
     // clear line
-=======
-    setTodoList([...toDoList, { task: currentTask, completed: false }]);
->>>>>>> parent of dd493b3 (cleaning)
     inputTask.current.value = '';
     setCurrentTask('');
     setReminder(!reminder);
@@ -89,7 +85,6 @@ function ToDo() {
             setCurrentTask(event.target.value);
           }}
         />
-<<<<<<< HEAD
         <label className="labelReminder">Set Reminder:</label>
         <div className="form-control form-control-check">
           <input
@@ -106,9 +101,6 @@ function ToDo() {
         <button id="addButton" onClick={addTask}>
           Add Task
         </button>
-=======
-        <button onClick={addTask}>Add Task</button>
->>>>>>> parent of dd493b3 (cleaning)
       </div>
       <hr />
 

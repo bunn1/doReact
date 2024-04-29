@@ -71,13 +71,13 @@ function ToDo() {
 
   return (
     <div className="main-container min-h-screen bg-[#403d39] flex justify-center items-center">
-      <div className="container bg-[#fffcf2] mx-auto p-4 shadow-xl rounded-md max-w-lg">
+      <div className="container bg-[#fffcf2] mx-auto pt-10 pb-10 shadow-xl rounded-md max-w-lg">
         <h1 className="Rubrik text-2xl text-[#252422] text-center pt-4 pb-4 ">
           To Do List!
         </h1>
         <div className="flex flex-col justify-center items-center w-full h-full p-4">
           <input
-            className="taskField border border-gray-300 rounded-md p-1  mb-4"
+            className="taskField border border-gray-300 rounded-md p-1  mb-4 focus:outline-none"
             ref={inputTask}
             value={currentTask}
             type="text"
@@ -108,7 +108,7 @@ function ToDo() {
           </div>
 
           <button
-            className="btnAdd bg-[#403d39] rounded-md px-4 py-2 mt-2 mb-2 text-white"
+            className="btnAdd bg-[#403d39] rounded-md px-8 py-2 mt-4 mb-4 text-white"
             id="addButton"
             onClick={addTask}
           >

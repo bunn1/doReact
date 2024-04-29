@@ -91,7 +91,7 @@ function ToDo() {
             }}
           />
           <div className="flex items-center">
-            <label className="labelReminder mr-4 text-[#252422]">
+            <label className="labelReminder mr-4 text-[#252422] my-4">
               Set Reminder:
             </label>
             <div className="form-control form-control-check">
@@ -154,7 +154,7 @@ function ToDo() {
                       Edit
                     </button>
                     <button
-                      className="saveBtn bg-[#eb5e28] rounded-md px-4 py-2 mt-2 mb-2 text-white"
+                      className="saveBtn bg-[#eb5e28] rounded-md px-4 py-2 my-3 text-white"
                       onClick={handleSave}
                     >
                       Save
